@@ -5,9 +5,10 @@ function App() {
   const [data, setData] = useState({});
   const [latitude, setLatitude] = useState([]);
   const [longtitude, setLongtitude] = useState([]);
+  const [city, setCity] = useState("");
 
-
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&units=metric&appid=4caff8294ee201adf3e5c23ee3dab249`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4caff8294ee201adf3e5c23ee3dab249`;
+  //const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&units=metric&appid=4caff8294ee201adf3e5c23ee3dab249`;
 
   const SearchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -27,18 +28,9 @@ function App() {
         <div className="search">
           <input
             type="text"
-            value={latitude}
-            onChange={(event) => setLatitude(event.target.value)}
-            placeholder="Enter Latitude"
-            onKeyPress={SearchLocation}
-          />
-        </div>
-        <div className="search">
-          <input
-            type="text"
-            value={longtitude}
-            onChange={(event) => setLongtitude(event.target.value)}
-            placeholder="Enter Longtitude"
+            value={city}
+            onChange={(event) => setCity(event.target.value)}
+            placeholder="Enter Location"
             onKeyPress={SearchLocation}
           />
         </div>
