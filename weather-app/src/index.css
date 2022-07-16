@@ -52,16 +52,17 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
 }
-.app .search-box {
+/* .app .search-box {
   display: flex;
   justify-content: center;
-}
+} */
 .app .search {
   text-align: center;
   padding: 1rem;
   margin-top: 0.5rem;
 }
 .app input {
+  width: 25%;
   padding: 0.7rem;
   font-size: 1.2rem;
   border-radius: 25px;
