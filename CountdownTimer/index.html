@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Down Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>New Years Eve</h1>
+    <div class="countdown-container">
+        <div class="countdown-el days-container">
+            <div class="big-text" id="days">0</div>
+            <span>days</span>
+        </div>
+        <div class="countdown-el hours-container">
+            <p class="big-text" id="hours">0</p>
+            <span>hours</span>
+        </div>
+        <div class="countdown-el minutes-container">
+            <p class="big-text" id="minutes">0</p>
+            <span>minutes</span>
+        </div>
+        <div class="countdown-el seconds-container">
+            <p class="big-text" id="seconds">0</p>
+            <span>seconds</span>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAVCnm_dy592zWE3WxpjjBrqENQYD_jnqI",
+          authDomain: "timecounting-arm.firebaseapp.com",
+          projectId: "timecounting-arm",
+          storageBucket: "timecounting-arm.appspot.com",
+          messagingSenderId: "1035625514891",
+          appId: "1:1035625514891:web:3398234ae5537738b7918e",
+          measurementId: "G-YFZJK8P3NC"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
