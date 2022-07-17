@@ -1,0 +1,4 @@
+**/node_modules
+*/node_modules
+/node_modules
+./RealTimeChat/server/node_modules
